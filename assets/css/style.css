@@ -1871,6 +1871,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+  .code-highlight-yellow {
+    color: var(--orange-yellow-crayola);
+    display: inline;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+  .announcement-padding{
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 
 
   /**
