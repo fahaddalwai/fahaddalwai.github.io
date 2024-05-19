@@ -2,9 +2,9 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
-Web developer
+alt = Fahad Dalwai
+Fahad Dalwai
+Developer
 
 Show Contacts
 
