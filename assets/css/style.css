@@ -506,7 +506,13 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
-
+.service-text{
+  color: var(--light-gray);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
 
 /**
  * #service 
