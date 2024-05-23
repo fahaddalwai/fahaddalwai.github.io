@@ -1731,10 +1731,64 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* service */
 
-  .service-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 25px;
-  }
+/* Tech stack */
+.techstack p {
+  margin-bottom: 15px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
+.techstack {
+  margin-bottom: 15px;
+}
+
+.techstack-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Changed to center align items */
+  gap: 15px; /* Increased gap for a little padding between items */
+  margin: 0;
+  padding: 8px; /* Adjusted padding */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.techstack-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto; /* Ensures items do not stretch */
+}
+
+.techstack-item img {
+  width: 65px; /* Increased the size of the icons */
+  filter: grayscale(1);
+  transition: var(--transition-1);
+}
+
+.techstack-item img:hover {
+  filter: grayscale(0);
+}
+
+/* Scrollbar styling */
+.has-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
   /* testimonials */
 

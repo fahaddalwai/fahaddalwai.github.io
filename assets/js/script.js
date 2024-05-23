@@ -15,6 +15,49 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
+const programmingLanguages = [
+  { name: "py", iconUrl: "https://skillicons.dev/icons?i=py" },
+  { name: "go", iconUrl: "https://skillicons.dev/icons?i=go" },
+  { name: "java", iconUrl: "https://skillicons.dev/icons?i=java" },
+  { name: "cpp", iconUrl: "https://skillicons.dev/icons?i=cpp" },
+  { name: "c", iconUrl: "https://skillicons.dev/icons?i=c" },
+  { name: "vue", iconUrl: "https://skillicons.dev/icons?i=vue" },
+  { name: "kotlin", iconUrl: "https://skillicons.dev/icons?i=kotlin" },
+  { name: "js", iconUrl: "https://skillicons.dev/icons?i=js" },
+  { name: "sql", iconUrl: "https://skillicons.dev/icons?i=mysql" },
+  { name: "mongodb", iconUrl: "https://skillicons.dev/icons?i=mongodb" }
+];
+
+const devOpsTools = [
+  { name: "aws", iconUrl: "https://skillicons.dev/icons?i=aws" },
+  { name: "azure", iconUrl: "https://skillicons.dev/icons?i=azure" },
+  { name: "tensorflow", iconUrl: "https://skillicons.dev/icons?i=tensorflow" },
+  { name: "docker", iconUrl: "https://skillicons.dev/icons?i=docker" },
+  { name: "elasticsearch", iconUrl: "https://skillicons.dev/icons?i=elasticsearch" },
+  { name: "fastapi", iconUrl: "https://skillicons.dev/icons?i=fastapi" },
+  { name: "kubernetes", iconUrl: "https://skillicons.dev/icons?i=kubernetes" },
+  { name: "flask", iconUrl: "https://skillicons.dev/icons?i=flask" },
+  { name: "gitlab", iconUrl: "https://skillicons.dev/icons?i=gitlab" },
+  { name: "redis", iconUrl: "https://skillicons.dev/icons?i=redis" }
+];
+
+function renderTechStackList(containerId, techStack) {
+  const container = document.getElementById(containerId);
+  techStack.forEach((item, index) => {
+    const listItem = document.createElement('li');
+    listItem.className = 'techstack-item';
+    listItem.innerHTML = `<img src="${item.iconUrl}" alt="${item.name}">`;
+    container.appendChild(listItem);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderTechStackList('programming-languages', programmingLanguages);
+  renderTechStackList('devops-tools', devOpsTools);
+});
+
+
+
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
