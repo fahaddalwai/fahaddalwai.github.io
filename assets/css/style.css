@@ -1184,6 +1184,38 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-input:focus:invalid { border-color: var(--bittersweet-shimmer); }
 
+.calendly-btn {
+  position: relative;
+  bottom: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  width:fit-content; /* Adjust width as needed */
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+.calendly-btn ion-icon { font-size: 16px; }
+
+.calendly-btn:hover { background: var(--bg-gradient-yellow-1); }
+
+.calendly-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+
+
+
+.calendly-btn:disabled:hover { background: var(--border-gradient-onyx); }
+
+.calendly-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+
+
 .form-btn {
   position: relative;
   width: 100%;
@@ -1201,6 +1233,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   z-index: 1;
   transition: var(--transition-1);
 }
+
+
 
 .form-btn::before {
   content: "";
@@ -1247,7 +1281,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
-
+  
 
   /**
    * #PORTFOLIO, BLOG 
@@ -1788,63 +1822,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/* Tech stack */
-.techstack p {
-  margin-bottom: 20px;
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  font-weight: var(--fw-300);
-  line-height: 1.6;
-}
 
-.techstack {
-  margin-bottom: 20px;
-}
-
-.techstack-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; /* Changed to center align items */
-  gap: 15px; /* Increased gap for a little padding between items */
-  margin: 0;
-  padding: 15px; /* Adjusted padding */
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-}
-
-.techstack-item {
-  scroll-snap-align: start;
-  flex: 0 0 auto; /* Ensures items do not stretch */
-}
-
-.techstack-item img {
-  width: 65px; /* Increased the size of the icons */
-  filter: grayscale(1);
-  transition: var(--transition-1);
-}
-
-.techstack-item img:hover {
-  filter: grayscale(0);
-}
-
-/* Scrollbar styling */
-.has-scrollbar::-webkit-scrollbar {
-  height: 6px;
-}
-
-.has-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
 
 
   /* testimonials */
@@ -1874,14 +1852,72 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 
+/* Tech stack */
+.techstack p {
+  margin-bottom: 20px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
 
+.techstack {
+  padding-bottom: 25px;
+}
+
+.techstack-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; /* Changed to center align items */
+  gap: 12px; /* Increased gap for a little padding between items */
+  margin: 0;
+  padding: 15px; /* Adjusted padding */
+  
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+}
+
+.techstack-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto; /* Ensures items do not stretch */
+}
+
+.techstack-item img {
+  width: 65px; /* Increased the size of the icons */
+  filter: grayscale(1);
+  transition: var(--transition-1);
+}
+
+.techstack-item img:hover {
+  filter: grayscale(0);
+}
+
+/* Scrollbar styling */
+.has-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 
 /**
- * responsive larger than 1250px screen
+ * responsive larger than 900px screen
  */
 
-@media (min-width: 1250px) {
+@media (min-width: 900px) {
 
   /**
    * RESET
