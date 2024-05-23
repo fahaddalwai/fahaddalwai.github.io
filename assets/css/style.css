@@ -559,6 +559,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
+
 }
 
 
@@ -1184,11 +1185,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-input:focus:invalid { border-color: var(--bittersweet-shimmer); }
 
+.button-container {
+  display: flex;
+  gap: 10px; /* Optional: Adjust the space between the buttons */
+}
+
+
+
 .calendly-btn {
   position: relative;
-  bottom: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
-  width:fit-content; /* Adjust width as needed */
+  
+  width:fit-content; 
   background: var(--border-gradient-onyx);
   color: var(--orange-yellow-crayola);
   display: flex;
@@ -1810,7 +1817,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
   .service-item-title {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
   }
   
   .service-item-text {
@@ -1818,6 +1825,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     font-size: var(--fs-6);
     font-weight: var(--fw-3);
     line-height: 1.6;
+    
   }
 
 
