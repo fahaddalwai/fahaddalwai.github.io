@@ -1048,14 +1048,35 @@ main {
 }
 
 .fig-caption{
-  margin-left: 20px;
+  margin-left: 10px;
   color: var(--light-gray);
   font-size: var(--fs-8);
   text-align: center;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.experience-image-3{
+  margin-left: 15px;
+  margin-top: 10px;
+  height: 240px;
+  width:200px;
+  object-fit: fill;
+  align-self:flex-start;
+}
+
+.experience-image-2{
+  margin-left: 15px;
+  
+  height: 200px;
+  width:250px;
+  object-fit: fill;
+  align-self: center;
 }
 
 .experience-image {
   margin-left: 15px;
+  
   height: 250px;
   width:200px;
   object-fit: fill;
