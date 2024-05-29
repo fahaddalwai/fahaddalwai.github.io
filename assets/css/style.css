@@ -331,10 +331,7 @@ main {
   gap: 15px;
 }
 
-.avatar-box {
-  background: var(--bg-gradient-onyx);
-  border-radius: 20px;
-}
+
 
 .info-content .name {
   color: var(--white-2);
@@ -1033,10 +1030,15 @@ main {
   font-weight: var(--fw-300);
 }
 
+.avatar-box{
+  background: var(--bg-gradient-onyx);
+  border-radius: 20px;
+}
 
 .experience-text{
   color: var(--light-gray);
   text-align: justify;
+
   margin-right: 0px;
   line-height:190%;
   margin-bottom: 30px;
@@ -1457,7 +1459,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img { width: 160px;
+    border-radius: 30px; }
 
   .info-content .name { margin-bottom: 15px; }
 
