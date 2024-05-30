@@ -1459,8 +1459,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 160px;
-    border-radius: 30px; }
+  .avatar-box img { width: 120px;
+    border-radius: 12px; }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1584,7 +1584,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
   }
 
-  .modal-avatar-box img { width: 65px; }
+  .modal-avatar-box img { width: 65px; 
+}
 
   .modal-img-wrapper > img {
     display: block;
