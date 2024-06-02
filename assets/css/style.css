@@ -1354,6 +1354,12 @@ textarea.form-input::-webkit-resizer { display: none; }
  */
 
 @media (min-width: 200px) {
+  .code-highlight-yellow {
+    color: var(--orange-yellow-crayola);
+    display: inline;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
   .avatar-box { border-radius: 30px; }
 
   .avatar-box img { width: 80px;
@@ -1684,7 +1690,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
-
+  .code-highlight-yellow {
+    color: var(--orange-yellow-crayola);
+    display: inline;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 
   /**
    * SIDEBAR
