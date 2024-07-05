@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("Ni8iUEMSa4CBkZtkj"); // Replace with your EmailJS user ID
+  })();
+</script>
+  
+  
   <title>Fahad Salim Dalwai | Portfolio</title>
   <meta name="google-site-verification" content="JwGNeSczqi_9NtzMvD_lRLiIiX_3EAZdButPqm5qZ5o" />
 
@@ -1145,30 +1155,24 @@ Intrusion Detection under Dr. Thamizharasan Sivanesan.</em>
         </section>
 
         <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <div class="button-container">
-              <button class="form-btn" type="submit" disabled data-form-btn>
-                <ion-icon name="paper-plane"></ion-icon>
-                <span>Send Message</span>
-              </button>
-              <a class="calendly-btn" href="https://calendly.com/dalwaifahad/30min" target="_blank">
-                <ion-icon name="calendar"></ion-icon>
-                <span>Meet me instead?</span>
-              </a>
-            </div>
-          </form>
+      <h3 class="h3 form-title">Contact Form</h3>
+      <form id="contact-form" class="form">
+        <div class="input-wrapper">
+          <input type="text" name="from_name" class="form-input" placeholder="Full name" required>
+          <input type="email" name="to_name" class="form-input" placeholder="Email address" required>
+        </div>
+        <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+        <div class="button-container">
+          <button class="form-btn" type="submit">
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+          <a class="calendly-btn" href="https://calendly.com/dalwaifahad/30min" target="_blank">
+            <ion-icon name="calendar"></ion-icon>
+            <span>Meet me instead?</span>
+          </a>
+        </div>
+      </form>
 
         </section>
 
@@ -1187,6 +1191,27 @@ Intrusion Detection under Dr. Thamizharasan Sivanesan.</em>
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+
+  <script type="text/javascript">
+
+    function resetForm() {
+      document.getElementById('contact-form').reset();
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      emailjs.sendForm('service_hwxtisx', 'template_4ktj99a', this)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Email sent successfully!');
+          resetForm();
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Failed to send email. Please try again later.');
+        });
+    });
+  </script>
 
   <!--
     - ionicon link
