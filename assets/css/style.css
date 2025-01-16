@@ -1952,7 +1952,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Tech stack */
 .techstack p {
   margin-bottom: 20px;
-  color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
@@ -1983,7 +1982,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .techstack-item img {
   width: 65px; /* Increased the size of the icons */
-  filter: grayscale(1);
+  
   transition: var(--transition-1);
 }
 
